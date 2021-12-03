@@ -917,22 +917,13 @@ console.log( 'WebGL status: ' + webGLStatus );
 			this.gestures.addEventListener( 'pinch', (ev)=>{
 				//console.log( ev );  
 				if (ev.initialise !== undefined){
-					self.startScale = self.current4DSequence.scale.clone();
+					self.startScale = self.current4DSequence.object.scale.clone();
 				}else{
 					const scale = self.startScale.clone().multiplyScalar(ev.scale);
-					self.current4DSequence.scale.copy( scale );
+					self.current4DSequence.object.scale.copy( scale );
 					self.ui.updateElement('info', `pinch delta:${ev.delta.toFixed(3)} scale:${ev.scale.toFixed(2)}` );
 				}
 			});
-			this.gestures.addEventListener( 'rotate', (ev)=>{
-				//      sconsole.log( ev ); 
-				if (ev.initialise !== undefined){
-					self.startQuaternion = self.knight.object.quaternion.clone();
-				}else{
-					self.current4DSequence.quaternion.copy( self.startQuaternion );
-					self.current4DSequence.rotateY( ev.theta );
-					self.ui.updateElement('info', `rotate ${ev.theta.toFixed(3)}`  );
-				}
 
 			function onSelect() {
 				
