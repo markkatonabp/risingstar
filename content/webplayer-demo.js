@@ -83,7 +83,7 @@ console.log( 'WebGL status: ' + webGLStatus );
 	import WEB4DS from '../lib/web4dv/web4dvImporter.js'
 
 	//Controller Gestures
-	import { ControllerGestures } from '../content/ControllerGestures'
+	import { ControllerGestures } from '../content/ControllerGestures.js'
 
 // if ( webGLStatus ) {
 	// THREE.js WebGL compatibility
