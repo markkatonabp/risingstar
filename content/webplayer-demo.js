@@ -82,6 +82,9 @@ console.log( 'WebGL status: ' + webGLStatus );
 	// WEB4DV: Import
 	import WEB4DS from '../lib/web4dv/web4dvImporter.js'
 
+	//Controller Gestures
+	import { ControllerGestures } from '../content/ControllerGestures'
+
 // if ( webGLStatus ) {
 	// THREE.js WebGL compatibility
 	if (WEBGL.isWebGL2Available())
@@ -884,6 +887,7 @@ console.log( 'WebGL status: ' + webGLStatus );
 		if ( isAR ) {
 			
 			renderAR = true;
+			this.gestures = new ControllerGestures( this.renderer );
 
 			reticle = new Mesh(
 							new RingBufferGeometry( 0.06, 0.10, 32 ).rotateX( - Math.PI / 2 ),
@@ -909,6 +913,17 @@ console.log( 'WebGL status: ' + webGLStatus );
 					current4DSequence.currentQuality = 'sd';
 				});
 			}
+
+			this.gestures.addEventListener( 'pinch', (ev)=>{
+				//console.log( ev );  
+				if (ev.initialise !== undefined){
+					self.startScale = self.current4DSequence.object.scale.clone();
+				}else{
+					const scale = self.startScale.clone().multiplyScalar(ev.scale);
+					self.current4DSequence.object.scale.copy( scale );
+					self.ui.updateElement('info', `pinch delta:${ev.delta.toFixed(3)} scale:${ev.scale.toFixed(2)}` );
+				}
+			});
 
 			function onSelect() {
 				
