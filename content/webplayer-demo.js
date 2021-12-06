@@ -2,7 +2,7 @@
 * TEST WEBGL COMPATIBILITY *
 ***************************/
 //disable zoom?
-element.addEventListener('wheel', event => {
+$(this).addEventListener('wheel', event => {
 	const { ctrlKey } = event
 	if (ctrlKey) {
 	   event.preventDefault();
