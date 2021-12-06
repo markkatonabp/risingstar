@@ -176,8 +176,8 @@ console.log( 'WebGL status: ' + webGLStatus );
 		controls = new OrbitControls(camera, orbitcontroller);
 			controls.minPolarAngle  = (10 * (Math.PI / 180));
 			controls.maxPolarAngle  = (100 * (Math.PI / 180));
-			controls.minDistance  = 5;
-			controls.maxDistance  = 5;
+			controls.minDistance  = 1;
+			controls.maxDistance  = 10;
 		//	controls.enableKeys = true;
 		//	controls.enablePan = false;
 			controls.autoRotate = true;
@@ -921,7 +921,7 @@ console.log( 'WebGL status: ' + webGLStatus );
 				}else{
 					const scale = self.startScale.clone().multiplyScalar(ev.scale);
 					self.current4DSequence.object.scale.copy( scale );
-					self.ui.updateElement('info', `pinch delta:${ev.delta.toFixed(3)} scale:${ev.scale.toFixed(2)}` );
+					
 				}
 			});
 
