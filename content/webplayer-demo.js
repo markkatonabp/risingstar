@@ -1,6 +1,15 @@
 /***************************
 * TEST WEBGL COMPATIBILITY *
 ***************************/
+//disable zoom?
+element.addEventListener('wheel', event => {
+	const { ctrlKey } = event
+	if (ctrlKey) {
+	   event.preventDefault();
+	   return
+	}
+ }, { passive: false })
+
 function isWebGLCompliant() { 
       
 	var webglCanvas = document.createElement("canvas");
