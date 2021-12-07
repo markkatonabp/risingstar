@@ -40,25 +40,20 @@
 <!-- JavaScript / JQuery --> 
 <script src="./content/script.js"></script>		<!--<script type="text/javascript" src="./lib/web4dv/CODEC.js"></script>-->
 
-<script> window.blockMenuHeaderScroll = false;
-    $(window).on('touchstart', function(e)
-    {
-        if ($(e.target).closest('#map').length == 1)
-        {
-            blockMenuHeaderScroll = true;
-        }
-    });
-    $(window).on('touchend', function()
-    {
-        blockMenuHeaderScroll = false;
-    });
-    $(window).on('touchmove', function(e)
-    {
-        if (blockMenuHeaderScroll)
-        {
-            e.preventDefault();
-        }
-    });
+<script> document.addEventListener("gesturestart", function (e) {
+	e.preventDefault();
+    document.body.style.zoom = 0.99;
+});
+
+document.addEventListener("gesturechange", function (e) {
+	e.preventDefault();
+
+  document.body.style.zoom = 0.99;
+});
+document.addEventListener("gestureend", function (e) {
+	  e.preventDefault();
+    document.body.style.zoom = 1;
+});
 </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
