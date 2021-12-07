@@ -40,7 +40,12 @@
 <!-- JavaScript / JQuery --> 
 <script src="./content/script.js"></script>		<!--<script type="text/javascript" src="./lib/web4dv/CODEC.js"></script>-->
 
-
+<style type="text/css" media="screen">
+    html {
+        -webkit-text-size-adjust: none;
+        touch-action: pan-y; /*prevent user scaling*/
+    }
+</style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     </head>
@@ -193,20 +198,6 @@
         </div>    
         <!-- JavaScript / JQuery script --> 
         <script type="module" src="./content/webplayer-demo.js"></script>
-        <script> document.addEventListener("gesturestart", function (e) {
-            e.preventDefault();
-            document.body.style.zoom = 0.99;
-        });
-        
-        document.addEventListener("gesturechange", function (e) {
-            e.preventDefault();
-        
-          document.body.style.zoom = 0.99;
-        });
-        document.addEventListener("gestureend", function (e) {
-              e.preventDefault();
-            document.body.style.zoom = 1;
-        });
-        </script>
+       
             
 </body></html>
