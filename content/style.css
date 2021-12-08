@@ -1621,7 +1621,9 @@ footer.footer-xs {
 	padding:0px;
 	line-height: 0px;
     white-space: nowrap;
-    font-size: 0px;}
+    font-size: 0px;
+	margin: auto;
+}
 	
 footer.footer-xs #hologalleryControllers, footer.footer-xs #copyright {
 	font-size: initial;
