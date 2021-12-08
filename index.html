@@ -43,12 +43,9 @@
 <style type="text/css" media="screen">
     html {
         -webkit-text-size-adjust: none;
-        touch-action: none; /*prevent user scaling*/
-        -ms-touch-action: none;
+        touch-action: none;
     }
 </style>
-
-<meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
     </head>
     
     <body id="page-demoweb" class="page-4dv" data-new-gr-c-s-check-loaded="14.1031.0" data-gr-ext-installed="">
@@ -67,9 +64,7 @@
         <div id="webgl-lowfps-advertisement" class="">
             <div style="position: absolute;top: 50%;transform: translate(-50%, -50%);max-width: 620px;left: 50%;">
                 <h2 class="text-4dv-secondary" style="text-transform:uppercase;">Disclaimer</h2>
-                <p>The WebGL Demo has been disactivated in reason of a low graphic performance detected.</p>
-                <p>If you think this may be an error, or if you want to play this demo, whatever the performances are, you can click on the button below:</p>
-                <a id="webgl-lowfps-advertisement-btn" href="https://www.4dviews.com/volumetric-demo#">Launch Demo</a>
+                <p>The experience has been disactivated in reason of a low graphic performance detected.</p>
             </div>
         </div>
         <section id="demopage-section-webgl" class="checkfps">
@@ -167,9 +162,5 @@
         </div>    
         <!-- JavaScript / JQuery script --> 
         <script type="module" src="./content/webplayer-demo.js"></script>
-
-       <script>document.addEventListener('touchmove', function (event) {
-        if (event.scale !== 1) { event.preventDefault(); }
-      }, { passive: false });</script>
             
 </body></html>
