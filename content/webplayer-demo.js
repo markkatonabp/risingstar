@@ -376,19 +376,6 @@ console.log( 'WebGL status: ' + webGLStatus );
 			});
 		}
 
-	var buttonFullscreen = document.getElementById('btn-webplayer-fullScreen');
-		if (buttonFullscreen !== null) {
-			
-			buttonFullscreen.addEventListener('click', function(){
-				
-				if ( buttonFullscreen.classList.contains("fullscreen") ) {
-					buttonFullscreen.classList.remove('fullscreen');
-				} else {
-					buttonFullscreen.classList.add('fullscreen');
-					goFullscreen();
-				}
-			});
-		}
 
 	var buttonWrapper = document.getElementById('hologalleryControllersWrapper');
 	var buttonPin = document.getElementById('btn-webplayer-pin');
@@ -668,114 +655,7 @@ console.log( 'WebGL status: ' + webGLStatus );
 	});
 
 
-	var buttonQuality = document.getElementById('btn-webplayer-quality');
-	var buttonQualityList = document.getElementById('btn-webplayer-quality-list');
-	var textQuality = document.getElementById('text-webplayer-quality');
-		if (buttonQuality !== null) {
-			
-			buttonQuality.addEventListener('click', function(){
-				if ( buttonQualityList.classList.contains("active") ) {
-					buttonQualityList.style.display = 'none';
-					buttonQualityList.classList.remove('active');
-				} else {
-					buttonQualityList.style.display = 'block';
-					buttonQualityList.classList.add('active');
-				}
-			});
-			
-			var listElem = buttonQualityList.querySelectorAll('.btn-webplayer-quality-list-elem');
-			listElem.forEach( item => {
-				item.addEventListener('click', function(){
-					
-					let currentQuality = player4D.currentSequence.currentQuality;
-					
-					listElem.forEach( item => { 
-						
-						if( item.classList.contains('active') )
-							currentQuality = item.getAttribute('data-quality') 
-						
-						item.classList.remove('active');
-					});
-					
-					this.classList.add('active');
 
-					switch( this.getAttribute('data-quality') ) {
-						
-						case 'sd' :
-							if( currentQuality === 'sd') {
-								break;
-							} else {
-								
-								player4D.currentSequence[currentQuality].destroy( function() {
-									player4D.currentSequence.sd.load(false);
-									player4D.currentSequence.isLoaded = true;
-									
-									player4D.currentSequence.currentQuality = 'sd';
-									
-									player4D.showControls = true;
-									
-									textQuality.innerHTML = '720p';
-//									player4D.currentSequence.sd.toggleStreaming(player4D.keepInCache);
-									
-									buttonDestroyLoad.style.display = 'none';
-									
-									buttonPlayPause.classList.add('playing');
-								});
-								
-							}
-							break;
-						case 'md' :
-							if( currentQuality === 'md') {
-								break;
-							} else {
-								
-								player4D.currentSequence[currentQuality].destroy( function() {
-									player4D.currentSequence.md.load(false);
-									player4D.currentSequence.isLoaded = true;
-									
-									player4D.currentSequence.currentQuality = 'md';
-									
-									player4D.showControls = true;
-									
-									textQuality.innerHTML = '1440p';
-//									player4D.currentSequence.md.toggleStreaming(player4D.keepInCache);
-									
-									buttonDestroyLoad.style.display = 'none';
-									
-									buttonPlayPause.classList.add('playing');
-								});
-								
-							}
-							break;
-						case 'hd' :
-							if( currentQuality === 'hd') {
-								break;
-							} else {
-								
-								player4D.currentSequence[currentQuality].destroy( function() {
-									player4D.currentSequence.hd.load(false);
-									player4D.currentSequence.isLoaded = true;
-									
-									player4D.currentSequence.currentQuality = 'hd';
-									
-									player4D.showControls = true;
-									
-									textQuality.innerHTML = '2880p';
-//									player4D.currentSequence.hd.toggleStreaming(player4D.keepInCache);
-									
-									buttonDestroyLoad.style.display = 'none';
-									
-									buttonPlayPause.classList.add('playing');
-								});
-								
-							}
-							break;
-						default :
-							console.log("Err 331");
-					}
-				});
-			});
-		}
 
 
 
