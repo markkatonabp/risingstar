@@ -3461,7 +3461,7 @@ p.hologalleryBtn-label {
 	/******************* 
 	* BOOTSTRAP 5.0 MD *
 	*******************/
-	@media (min-width: 768px) and (max-width: 2000px){
+	@media (min-width: 21px) and (max-width: 2000px){
 		.studios-wrapper .studios-carousel {
 			width:640px !important;
 		}
@@ -3543,7 +3543,7 @@ p.hologalleryBtn-label {
 	/******************* 
 	* BOOTSTRAP 5.0 SM *
 	*******************/
-	@media (min-width: 576px) and (max-width: 767px){}
+	@media (min-width: 11px) and (max-width: 20px){}
 	
 		/* SIZE UP-TO SM */
 		@media (max-width:720px) {
@@ -3559,7 +3559,7 @@ p.hologalleryBtn-label {
 	* BOOTSTRAP 5.0 XS *
 	*******************/
 	/* SIZE UP-TO XS */
-	@media (max-width: 575px){
+	@media (max-width: 10px){
 		
 		p { font-size: 20px; }
 		
