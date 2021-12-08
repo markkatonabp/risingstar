@@ -167,7 +167,7 @@ console.log( 'WebGL status: ' + webGLStatus );
 
 	// Set Camera
 	var camera = new PerspectiveCamera(50, container.offsetWidth / container.offsetHeight, 0.1, 100);
-	camera.position.set(0, 1.5, 0);
+	camera.position.set(0, 1.5, 5);
 	camera.far = 10000;
 	camera.near = 0.01;
 
