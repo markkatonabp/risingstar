@@ -397,84 +397,8 @@ console.log( 'WebGL status: ' + webGLStatus );
 			});
 		}
 
-	var buttonCameraRot = document.getElementById('btn-webplayer-camerarotation');
-		if (buttonCameraRot !== null) {
-			
-			buttonCameraRot.addEventListener('click', function(){
-				
-				if ( buttonCameraRot.classList.contains("inactive") ) {
-					buttonCameraRot.classList.remove('inactive');
-					controls.autoRotate = true;
-				} else {
-					buttonCameraRot.classList.add('inactive');
-					controls.autoRotate = false;
-				}
-			});
-		}
-
-	var buttonTexture = document.getElementById('btn-webplayer-texture');
-		if (buttonTexture !== null) {
-			
-			buttonTexture.addEventListener('click', function(){
-				
-				if ( buttonTexture.classList.contains("active") ) {
-					buttonTexture.classList.remove('active');
-				} else {
-					buttonTexture.classList.add('active');
-				}
-				
-				relightOnOff(buttonTexture);
-			});
-		}
-
-	var buttonRelight = document.getElementById('btn-webplayer-relight');
-		function relightOnOff(buttonTexture){
-			
-			let currentQuality = player4D.currentSequence.currentQuality;
-			let texture4D = player4D.currentSequence[currentQuality].model4D.texture; 
-			
-			console.log(player4D.currentSequence[currentQuality]);
-			
-			let materialLit = new MeshStandardMaterial({
-					  map: texture4D,
-					  metalness: 0.0,
-					  roughness: 1.0
-				   });
-			let materialUnlit = new MeshBasicMaterial({ map: texture4D });
-			
-			
-				console.log(player4D.currentSequence[currentQuality]);
-			
-			if( buttonRelight.classList.contains('active') ) {
-
-				if( buttonTexture.classList.contains('active') ) {
-					player4D.currentSequence[currentQuality].model4D.mesh.material = materialLit;
-				} else {
-					materialLit.map = '';
-					player4D.currentSequence[currentQuality].model4D.mesh.material = materialLit;
-				}
-			} else {
-				if( buttonTexture.classList.contains('active') ) {
-					player4D.currentSequence[currentQuality].model4D.mesh.material = materialUnlit;
-				} else {
-					materialUnlit.map = '';
-					player4D.currentSequence[currentQuality].model4D.mesh.material = materialUnlit;
-				}
-
-			}
-		}
-		if (buttonRelight !== null) {
-			
-			buttonRelight.addEventListener('click', function(){
-				if ( buttonRelight.classList.contains("active") ) {
-					buttonRelight.classList.remove('active');
-				} else {
-					buttonRelight.classList.add('active');
-				}
-				
-				relightOnOff(buttonTexture);
-			});
-		}
+	
+	
 
 	var buttonStats = document.getElementById('btn-webplayer-stats');
 		function display4DStats(isStats) {
