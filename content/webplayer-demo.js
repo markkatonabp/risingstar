@@ -333,13 +333,22 @@ console.log( 'WebGL status: ' + webGLStatus );
 			buttonDestroyLoad.addEventListener('click', function(){
 							
 				let currentQuality = player4D.currentSequence.currentQuality;
-				
 				player4D.currentSequence[currentQuality].play();
-					
 				buttonDestroyLoad.style.display = 'none';
 
 				
 			});
+		}
+
+	var buttonStop = document.getElementById('btn-webplayer-stop');
+		if( buttonStop !== null ) {
+			buttonStop.addEventListener('click', function(){
+							
+				let currentQuality = player4D.currentSequence.currentQuality;
+				player4D.currentSequence[currentQuality].destroy( function() {
+				player4D.currentSequence.sd.load(false);
+				
+				});
 		}
 
 	var buttonPlayPause = document.getElementById('btn-webplayer-playPause');

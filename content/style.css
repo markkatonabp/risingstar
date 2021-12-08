@@ -2812,11 +2812,11 @@ body#page-demoweb footer.footer-xs #copyright {
 #btn-webplayer-audio:hover {
 	background-image: url('../img/icon/playback/audioHovered.png') !important;
 }
-#btn-webplayer-fullScreen {
-	background-image: url('../img/icon/playback/fullscreen.png');
+#btn-webplayer-stop {
+	background-image: url('../img/icon/playback/stop.png');
 }
-#btn-webplayer-fullScreen:hover {
-	background-image: url('../img/icon/playback/fullscreenHovered.png');
+#btn-webplayer-stop:hover {
+	background-image: url('../img/icon/playback/stopHo.png');
 }
 #btn-webplayer-fullScreen.fullscreen {
 	background-image: url('../img/icon/playback/minimize.png');
@@ -3251,6 +3251,17 @@ p.hologalleryBtn-label {
 .hologalleryBtn-audioOnOffBtn.inactive {
     opacity:0.3;}
 .hologalleryBtn-audioOnOffBtn.inactive:hover {
+    opacity:1;}
+
+/* Button Stop */
+.hologalleryBtn-Stop {
+    background-image: url(../img/icon/playback/stop.png);
+    opacity:1;}
+.hologalleryBtn-Stop:hover {
+    background-image: url(../img/icon/playback/stopHo.png);}
+.hologalleryBtn-Stop.inactive {
+    opacity:0.3;}
+.hologalleryBtn-Stop.inactive:hover {
     opacity:1;}
 
 /* Camera Rotation/Stop */
