@@ -3452,7 +3452,7 @@ p.hologalleryBtn-label {
 			}
 		}
 		/* SIZE FROM LG TO MORE */
-		@media (min-width: 2001px){
+		@media (min-width: 31px){
 			.navbar-dark .navbar-collapse .navbar-nav .nav-item:not(:first-child) .nav-link:before {
 				display: inline-block;
 			}
@@ -3461,13 +3461,13 @@ p.hologalleryBtn-label {
 	/******************* 
 	* BOOTSTRAP 5.0 MD *
 	*******************/
-	@media (min-width: 21px) and (max-width: 2000px){
+	@media (min-width: 21px) and (max-width: 30px){
 		.studios-wrapper .studios-carousel {
 			width:640px !important;
 		}
 	}
 		/* SIZE UP-TO MD */
-		@media (max-width: 2000px){
+		@media (max-width: 30px){
 			#header-nav-elements {
 				position: absolute;
 				top:0;
