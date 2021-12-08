@@ -398,7 +398,23 @@ console.log( 'WebGL status: ' + webGLStatus );
 		}
 
 	
-	
+	var buttonMuteUnmute = document.getElementById('btn-webplayer-audio');
+		if( buttonMuteUnmute !== null ) {
+			
+			buttonMuteUnmute.addEventListener('click', function(){
+				
+				let currentQuality = player4D.currentSequence.currentQuality;
+				
+				if ( player4D.currentSequence[currentQuality].isMuted ) {
+					player4D.currentSequence[currentQuality].unmute()
+						buttonMuteUnmute.classList.remove('muted');
+				} else {
+					player4D.currentSequence[currentQuality].mute();
+						buttonMuteUnmute.classList.add('muted');
+				}
+			});
+			
+		}
 
 	var buttonStats = document.getElementById('btn-webplayer-stats');
 		function display4DStats(isStats) {
