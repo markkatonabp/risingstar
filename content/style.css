@@ -2795,13 +2795,13 @@ body#page-demoweb footer.footer-xs #copyright {
 	background-image: url('../img/icon/playback/play.png') !important;
 }
 #btn-webplayer-playPause.play:hover {
-	background-image: url('../img/icon/playback/playHovered.png') !important;
+	background-image: url('../img/icon/playback/playHo.png') !important;
 }
 #btn-webplayer-playPause.pause {
 	background-image: url('../img/icon/playback/pause.png') !important;
 }
 #btn-webplayer-playPause.pause:hover {
-	background-image: url('../img/icon/playback/pauseHovered.png') !important;
+	background-image: url('../img/icon/playback/pauseHo.png') !important;
 }
 #btn-webplayer-audio {
 	background-image: url('../img/icon/playback/audio.png');
