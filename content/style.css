@@ -3239,7 +3239,7 @@ p.hologalleryBtn-label {
 .hologalleryBtn-playPauseBtn:not(.initPlayBtn) {
     background-image: url(../img/icon/playback/play.png);}
 .hologalleryBtn-playPauseBtn:not(.initPlayBtn):hover {
-    background-image: url(../img/icon/playback/playHovered.png);}
+    background-image: url(../img/icon/playback/playHo.png);}
 .hologalleryBtn-playPauseBtn:not(.initPlayBtn).playing {
     background-image: url(../img/icon/playback/pause.png);}
 .hologalleryBtn-playPauseBtn:not(.initPlayBtn).playing:hover {
