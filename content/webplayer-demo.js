@@ -335,6 +335,8 @@ console.log( 'WebGL status: ' + webGLStatus );
 				let currentQuality = player4D.currentSequence.currentQuality;
 				player4D.currentSequence[currentQuality].play();
 				buttonDestroyLoad.style.display = 'none';
+				elem.classList.remove('pause');
+				elem.classList.add('play');
 
 				
 			});
