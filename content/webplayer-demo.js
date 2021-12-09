@@ -380,8 +380,8 @@ console.log( 'WebGL status: ' + webGLStatus );
 				let currentQuality = player4D.currentSequence.currentQuality;
 				player4D.currentSequence[currentQuality].destroy(function(){
 				player4D.currentSequence.sd.load(true, true);
-				buttonPlayPause.classList.remove('play');
-				buttonPlayPause.classList.add('pause');
+				buttonPlayPause.classList.remove('pause');
+				buttonPlayPause.classList.add('play');
 				buttonPlayPause.style.backgroundImage  = "url('./img/icon/playback/play.png')";
 				
 				
