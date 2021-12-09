@@ -374,6 +374,10 @@ console.log( 'WebGL status: ' + webGLStatus );
 			});
 		}
 
+		buttonPlayPause.classList.remove('pause');
+		buttonPlayPause.classList.add('play');
+		buttonPlayPause.style.backgroundImage  = "url('./img/icon/playback/play.png')";
+
 		var buttonStop = document.getElementById('btn-webplayer-stop');
 		if( buttonStop !== null ) {
 			buttonStop.addEventListener('click', function(){
