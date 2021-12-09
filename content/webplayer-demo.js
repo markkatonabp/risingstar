@@ -382,7 +382,8 @@ console.log( 'WebGL status: ' + webGLStatus );
 				player4D.currentSequence.sd.load(true, true);
 				buttonPlayPause.classList.remove('play');
 				buttonPlayPause.classList.add('pause');
-				togglePlayPause(buttonPlayPause);
+				buttonPlayPause.style.backgroundImage  = "url('./img/icon/playback/play.png')";
+				
 				
 			});
 		});
