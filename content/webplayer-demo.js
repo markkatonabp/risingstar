@@ -337,6 +337,7 @@ console.log( 'WebGL status: ' + webGLStatus );
 				buttonDestroyLoad.style.display = 'none';
 				elem.classList.remove('pause');
 				elem.classList.add('play');
+				buttonPlayPause.style.backgroundImage  = "url('./img/icon/playback/play.png')";
 
 				
 			});
