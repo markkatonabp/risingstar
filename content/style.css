@@ -1591,7 +1591,7 @@ footer.bg-dblue a.link-network {
 	color: var(--4dv-primary);
 }
 footer.bg-green a.link-network {
-	color: transparent;
+	color: var(--4dv-dark);
 }
 footer a.link-network {
 	font-size: 40px;
@@ -3193,7 +3193,7 @@ progress::-webkit-progress-value {
 #hologalleryControllers #hologalleryControllersWrapper {
     /* position: absolute; */
     width:100%;
-    background-color:var(--4dv-light);
+    background-color:transparent;
     /* bottom:44px; */
     /* max-height: 44px; */
 }
