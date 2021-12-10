@@ -2771,6 +2771,16 @@ body#page-demoweb footer.footer-xs #copyright {
 	min-height: 96px;
 	width: auto;
 }
+.button4D.mini {
+	padding:3px 4px;
+	border:1px solid #fff;
+	box-shadow: -1px 1px 4px 0px rgba(0,0,0,.25);
+	text-transform: uppercase;
+	font-size: 8px;
+	height: auto;
+	min-height: 24px;
+	width: auto;
+}
 .button4D.optionPanel input {
 	margin:0 8px 0 0;
 	position: relative;
