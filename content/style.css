@@ -1591,7 +1591,7 @@ footer.bg-dblue a.link-network {
 	color: var(--4dv-primary);
 }
 footer.bg-green a.link-network {
-	color: var(--4dv-dark);
+	color: transparent;
 }
 footer a.link-network {
 	font-size: 40px;
