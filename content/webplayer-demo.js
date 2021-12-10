@@ -177,7 +177,7 @@ console.log( 'WebGL status: ' + webGLStatus );
 		controls = new OrbitControls(camera, orbitcontroller);
 			controls.minPolarAngle  = (10 * (Math.PI / 180));
 			controls.maxPolarAngle  = (100 * (Math.PI / 180));
-			controls.minDistance  = 1;
+			controls.minDistance  = 2;
 			controls.maxDistance  = 10;
 		//	controls.enableKeys = true;
 		//	controls.enablePan = false;
