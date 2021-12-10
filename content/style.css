@@ -3194,7 +3194,7 @@ progress::-webkit-progress-value {
     /* position: absolute; */
     width:100%;
     background-color: transparent;
-	margin:auto;
+	margin:0 auto;
     /* bottom:44px; */
     /* max-height: 44px; */
 }
