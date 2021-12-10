@@ -3193,8 +3193,7 @@ progress::-webkit-progress-value {
 #hologalleryControllers #hologalleryControllersWrapper {
     /* position: absolute; */
     width:100%;
-    background-color:black;
-	opacity: 0.5;
+    background-color: transparent;
     /* bottom:44px; */
     /* max-height: 44px; */
 }
