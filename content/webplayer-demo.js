@@ -282,17 +282,33 @@ console.log( 'WebGL status: ' + webGLStatus );
 
 	function buildSequences() {
 
+		let modelURL = null
+		const params = new Proxy(new URLSearchParams(window.location.search), {
+      	get: (searchParams, prop) => searchParams.get(prop),
+    	})
+
+		let modelLiveURL = params.model
+    	let modelaudio = params.audio
+    	const staticPath = 'https://storage.googleapis.com/risingstar_player/app'
+    	modelLiveURL = staticPath + modelLiveURL
+    	modelaudio = staticPath + modelaudio
+
 		let model4DS01Id = 'pitch';
-		let model4DS01Path = 'https://risingstar_player.storage.googleapis.com/model/pitch';
-		let model4DS01Audio = 'https://risingstar_player.storage.googleapis.com/model/sound.wav';
+		//let model4DS01Path = 'https://risingstar_player.storage.googleapis.com/model/pitch';
+		//let model4DS01Audio = 'https://risingstar_player.storage.googleapis.com/model/sound.wav';
 		let model4DS01Position = sequencePosition;
 		
 		// Sequence 01
 		let model4DS01Placeholder = new WEB4DS(model4DS01Id, 'https://risingstar_player.storage.googleapis.com/model/pitch_placeholder.4ds', 'https://risingstar_player.storage.googleapis.com/model/pitch_placeholder_mobile.4ds', '', model4DS01Position, renderer, scene, camera)
 
-		let model4DS01SD = new WEB4DS(model4DS01Id, model4DS01Path + '.4ds', model4DS01Path + '_mobile' +  '.4ds', model4DS01Audio, model4DS01Position, renderer, scene, camera);
-		let model4DS01MD = new WEB4DS(model4DS01Id, model4DS01Path + '.4ds', model4DS01Path + '_mobile' +  '.4ds', model4DS01Audio, model4DS01Position, renderer, scene, camera);
-		let model4DS01HD = new WEB4DS(model4DS01Id, model4DS01Path + '.4ds', model4DS01Path + '_mobile' +  '.4ds', model4DS01Audio, model4DS01Position, renderer, scene, camera);
+		//let model4DS01SD = new WEB4DS(model4DS01Id, model4DS01Path + '.4ds', model4DS01Path + '_mobile' +  '.4ds', model4DS01Audio, model4DS01Position, renderer, scene, camera);
+		//let model4DS01MD = new WEB4DS(model4DS01Id, model4DS01Path + '.4ds', model4DS01Path + '_mobile' +  '.4ds', model4DS01Audio, model4DS01Position, renderer, scene, camera);
+		//let model4DS01HD = new WEB4DS(model4DS01Id, model4DS01Path + '.4ds', model4DS01Path + '_mobile' +  '.4ds', model4DS01Audio, model4DS01Position, renderer, scene, camera);
+
+		let model4DS01SD = new WEB4DS(model4DS01Id, modelLiveURL, modelLiveURL, modelaudio, model4DS01Position, renderer, scene, camera);
+		let model4DS01MD = new WEB4DS(model4DS01Id, modelLiveURL, modelLiveURL, modelaudio, model4DS01Position, renderer, scene, camera);
+		let model4DS01HD = new WEB4DS(model4DS01Id, modelLiveURL, modelLiveURL, modelaudio, model4DS01Position, renderer, scene, camera);
+
 
 		const model4DS01 = {placeholder: model4DS01Placeholder, sd: model4DS01SD, md: model4DS01MD, hd: model4DS01HD, isLoaded: false, currentQuality: ''};
 
