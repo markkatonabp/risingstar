@@ -283,7 +283,7 @@ console.log( 'WebGL status: ' + webGLStatus );
 	function buildSequences() {
 
 		let model4DS01Id = 'pitch';
-		let model4DS01Path = 'https://storage.googleapis.com/testrisingstar/usher_dance_old%20process_30_00fps_PROCESSED_DESKTOP_1440';
+		let model4DS01Path = 'https://risingstar_player.storage.googleapis.com/model/pitch';
 		let model4DS01Audio = 'https://risingstar_player.storage.googleapis.com/model/sound.wav';
 		let model4DS01Position = sequencePosition;
 		
