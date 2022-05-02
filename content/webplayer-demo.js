@@ -288,7 +288,7 @@ console.log( 'WebGL status: ' + webGLStatus );
 		let model4DS01Position = sequencePosition;
 		
 		// Sequence 01
-		let model4DS01Placeholder = new WEB4DS(model4DS01Id, 'https://risingstar_player.storage.googleapis.com/model/pitch_placeholder.4ds', 'https://risingstar_player.storage.googleapis.com/model/pitch_placeholder_mobile.4ds', '', model4DS01Position, renderer, scene, camera)
+		let model4DS01Placeholder = new WEB4DS(model4DS01Id, 'https://storage.googleapis.com/testrisingstar/usher_dance_old%20process_30_00fps_PROCESSED_DESKTOP_1440', 'https://risingstar_player.storage.googleapis.com/model/pitch_placeholder_mobile.4ds', '', model4DS01Position, renderer, scene, camera)
 
 		let model4DS01SD = new WEB4DS(model4DS01Id, model4DS01Path + '.4ds', model4DS01Path + '_mobile' +  '.4ds', model4DS01Audio, model4DS01Position, renderer, scene, camera);
 		let model4DS01MD = new WEB4DS(model4DS01Id, model4DS01Path + '.4ds', model4DS01Path + '_mobile' +  '.4ds', model4DS01Audio, model4DS01Position, renderer, scene, camera);
