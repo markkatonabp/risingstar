@@ -283,12 +283,12 @@ console.log( 'WebGL status: ' + webGLStatus );
 	function buildSequences() {
 
 		let model4DS01Id = 'pitch';
-		let model4DS01Path = 'https://risingstar_player.storage.googleapis.com/model/pitch';
-		let model4DS01Audio = 'https://risingstar_player.storage.googleapis.com/model/sound.wav';
+		let model4DS01Path = 'https://testrisingstar.storage.googleapis.com/model/pitch';
+		let model4DS01Audio = 'https://testrisingstar.storage.googleapis.com/model/sound.wav';
 		let model4DS01Position = sequencePosition;
 		
 		// Sequence 01
-		let model4DS01Placeholder = new WEB4DS(model4DS01Id, 'https://risingstar_player.storage.googleapis.com/model/pitch_placeholder.4ds', 'https://risingstar_player.storage.googleapis.com/model/pitch_placeholder_mobile.4ds', '', model4DS01Position, renderer, scene, camera)
+		let model4DS01Placeholder = new WEB4DS(model4DS01Id, 'https://testrisingstar.storage.googleapis.com/model/pitch_placeholder.4ds', 'https://testrisingstar.storage.googleapis.com/model/pitch_placeholder_mobile.4ds', '', model4DS01Position, renderer, scene, camera)
 
 		let model4DS01SD = new WEB4DS(model4DS01Id, model4DS01Path + '.4ds', model4DS01Path + '_mobile' +  '.4ds', model4DS01Audio, model4DS01Position, renderer, scene, camera);
 		let model4DS01MD = new WEB4DS(model4DS01Id, model4DS01Path + '.4ds', model4DS01Path + '_mobile' +  '.4ds', model4DS01Audio, model4DS01Position, renderer, scene, camera);
